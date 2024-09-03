@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSerialNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="1."
+        android:fontFamily="@font/markformc"
+        android:textStyle="normal"
+        android:textSize="12sp"
+        android:textColor="#292929"
+        android:lineSpacingExtra="6sp"
+        android:layout_weight="0.2"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Sugar"
+        android:fontFamily="@font/markformc"
+        android:textStyle="normal"
+        android:textSize="12sp"
+        android:textColor="#292929"
+        android:lineSpacingExtra="6sp"
+        android:gravity="start"
+        android:layout_weight="0.4"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvItemWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="1kg"
+        android:fontFamily="@font/markformc"
+        android:textStyle="normal"
+        android:textSize="12sp"
+        android:textColor="#292929"
+        android:lineSpacingExtra="6sp"
+        android:gravity="center"
+        android:layout_weight="0.2"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvItemAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="50/-"
+        android:fontFamily="@font/markformc"
+        android:textStyle="normal"
+        android:textSize="12sp"
+        android:textColor="#292929"
+        android:lineSpacingExtra="6sp"
+        android:gravity="center"
+        android:layout_weight="0.2"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

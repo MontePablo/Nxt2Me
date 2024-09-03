@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="good_delivery_entries">
+        <item>Select an Option…</item>
+        <item>@string/home_delivery</item>
+        <item>@string/pick_up</item>
+    </string-array>
+
+    <string-array name="phone_entries">
+        <item>@string/home</item>
+        <item>@string/shop</item>
+        <item>@string/both</item>
+    </string-array>
+
+    <string-array name="booking_entries">
+        <item>@string/home</item>
+        <item>@string/shop</item>
+        <item>@string/both</item>
+    </string-array>
+
+    <string-array name="delivery_gender">
+        <item>@string/delivery_boy</item>
+        <item>@string/delivery_girl</item>
+    </string-array>
+
+    <string-array name="unit_entries">
+        <item>Select</item>
+        <item>@string/dozen</item>
+        <item>@string/kilogram</item>
+        <item>@string/gram</item>
+        <item>@string/litre</item>
+        <item>@string/ml</item>
+        <item>@string/per_piece</item>
+        <item>@string/per_box</item>
+    </string-array>
+
+    <string-array name="week_day_entries">
+        <item>@string/sunday</item>
+        <item>@string/monday</item>
+        <item>@string/tuesday</item>
+        <item>@string/wednesday</item>
+        <item>@string/thursday</item>
+        <item>@string/friday</item>
+        <item>@string/saturday</item>
+    </string-array>
+
+    <string-array name="time_slot_entries">
+        <item>@string/slot_0</item>
+        <item>@string/slot_1</item>
+        <item>@string/slot_2</item>
+        <item>@string/slot_3</item>
+        <item>@string/slot_4</item>
+        <item>@string/slot_5</item>
+        <item>@string/slot_6</item>
+        <item>@string/slot_7</item>
+        <item>@string/slot_8</item>
+        <item>@string/slot_9</item>
+    </string-array>
+</resources>

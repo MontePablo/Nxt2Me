@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:padding="5dp"
+    android:id="@+id/rootView">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:scaleType="fitCenter"
+        android:id="@+id/ivMerchantImage"
+        android:layout_width="160dp"
+        android:layout_height="130dp"
+        android:background="@drawable/bg_blank_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMerchantName"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        tools:text="Gautam general store"
+        android:fontFamily="@font/markformc"
+        android:textStyle="normal"
+        android:paddingTop="5dp"
+        android:textSize="16sp"
+        android:textColor="#292929"
+        android:lineSpacingExtra="6sp"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/ivMerchantImage"
+        android:layout_marginTop="3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

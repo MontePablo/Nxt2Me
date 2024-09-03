@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="125dp"
+    android:background="@drawable/bg_merchant_item"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_margin="4dp"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:scaleType="fitXY"
+        android:id="@+id/ivMerchantItemImage"
+        android:layout_width="91dp"
+        android:layout_height="91dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="9dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMerchantItemName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Description: Tradition singer, worked and composed under Suafsd"
+        android:textAllCaps="false"
+        android:fontFamily="@font/markformc"
+        android:textStyle="normal"
+        android:textSize="12sp"
+        android:textColor="#292929"
+        android:lineSpacingExtra="6sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toEndOf="@id/ivMerchantItemImage"
+        android:layout_marginStart="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="13dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/ivRent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_rent"
+        app:textAllCaps="false"
+        android:textAllCaps="false"
+        android:fontFamily="@font/markformc"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:textColor="#292929"
+        android:lineSpacingExtra="4sp"
+        app:layout_constraintBottom_toBottomOf="@id/ivMerchantItemImage"
+        app:layout_constraintStart_toEndOf="@id/ivMerchantItemImage"
+        android:layout_marginStart="11dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMerchantItemAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="14000"
+        app:textAllCaps="false"
+        android:textAllCaps="false"
+        android:fontFamily="@font/markformc"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:textColor="#292929"
+        android:lineSpacingExtra="4sp"
+        app:layout_constraintBottom_toBottomOf="@id/ivMerchantItemImage"
+        app:layout_constraintStart_toEndOf="@id/ivRent"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_chat"
+        app:layout_constraintBottom_toBottomOf="@id/ivMerchantItemImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="13dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_call"
+        app:layout_constraintBottom_toBottomOf="@id/ivMerchantItemImage"
+        app:layout_constraintEnd_toStartOf="@id/ivChat"
+        android:layout_marginEnd="35dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

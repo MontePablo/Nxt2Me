@@ -1,0 +1,8 @@
+/gradlew
+/gradlew.bat
+/.idea/
+/.gradle/
+/app/build/
+/build/
+/app/src/androidTest/
+/app/src/test/

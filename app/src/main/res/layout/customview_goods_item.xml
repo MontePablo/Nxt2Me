@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="125dp"
+    android:background="@drawable/bg_merchant_item"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_margin="4dp"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <!--    <androidx.appcompat.widget.AppCompatImageView-->
+    <!--        android:id="@+id/ivMerchantItemImage"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:srcCompat="@drawable/ic_groceries"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        android:layout_marginTop="17dp"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        android:layout_marginStart="10dp"-->
+    <!--        />-->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:scaleType="fitXY"
+        android:id="@+id/ivMerchantItemImage"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        tools:src="@drawable/bakery_copy"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMerchantItemName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Tata Sampann Moong Dal Chilla Mix 200 gm pann Moong Dal Chilla Mi"
+        android:fontFamily="@font/markformc"
+        android:textStyle="normal"
+        android:textSize="12sp"
+        android:textColor="#292929"
+        android:lineSpacingExtra="6sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="17dp"
+        app:layout_constraintStart_toEndOf="@id/ivMerchantItemImage"
+        android:layout_marginStart="12dp"
+        app:layout_constraintEnd_toStartOf="@id/tvMerchantItemAmount"
+        android:layout_marginEnd="40dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMerchantItemAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="₹ 39"
+        android:fontFamily="@font/markformc_medium"
+        android:textStyle="normal"
+        android:textSize="16sp"
+        android:textColor="#292929"
+        android:lineSpacingExtra="2sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="10dp"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddToCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_add_to_cart"
+        android:textAllCaps="false"
+        android:fontFamily="@font/markformc_medium"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:paddingBottom="10dp"
+        app:cornerRadius="8dp"
+        android:backgroundTint="@color/accent_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:entries="@array/item_count"
+        android:id="@+id/spinnerItemCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintStart_toEndOf="@id/ivMerchantItemImage"
+        android:layout_marginStart="12dp"
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#979797"
+        app:layout_constraintStart_toStartOf="@id/spinnerItemCount"
+        app:layout_constraintEnd_toEndOf="@id/spinnerItemCount"
+        app:layout_constraintTop_toBottomOf="@id/spinnerItemCount"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

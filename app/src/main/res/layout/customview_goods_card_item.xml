@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="125dp"
+    android:background="@drawable/bg_merchant_item"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginStart="4dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginEnd="4dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivMerchantItemImage"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        tools:src="@drawable/bakery_copy"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMerchantItemName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Tata Sampann Moong Dal Chilla Mix 200 gm pann Moong Dal Chilla Mi"
+        android:textAllCaps="false"
+        android:fontFamily="@font/markformc"
+        android:textStyle="normal"
+        android:textSize="12sp"
+        android:textColor="#292929"
+        android:lineSpacingExtra="6sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="17dp"
+        app:layout_constraintStart_toEndOf="@id/ivMerchantItemImage"
+        android:layout_marginStart="11dp"
+        app:layout_constraintEnd_toStartOf="@id/tvMerchantItemAmount"
+        android:layout_marginEnd="15dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMerchantItemAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="₹ 39"
+        android:textAllCaps="false"
+        android:fontFamily="@font/markformc_medium"
+        android:textStyle="normal"
+        android:textSize="16sp"
+        android:textColor="#292929"
+        android:lineSpacingExtra="2sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="17dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivDeleteItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/red_delete_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="27dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_goods_delivery_cart_item"
+        app:layout_constraintBottom_toBottomOf="@id/ivMerchantItemImage"
+        app:layout_constraintStart_toEndOf="@id/ivMerchantItemImage"
+        android:layout_marginStart="11dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_goods_delivery_cart_minus"
+            android:text="@string/lbl_minus"
+            android:textAllCaps="false"
+            android:layout_weight="0.25"
+            android:fontFamily="@font/markformc"
+            android:textStyle="normal"
+            android:textSize="21sp"
+            android:textColor="#292929"
+            android:lineSpacingExtra="-3sp"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemCount"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@drawable/bg_goods_delivery_cart_item_count"
+            tools:text="1"
+            android:textAllCaps="false"
+            android:fontFamily="@font/markformc"
+            android:textStyle="normal"
+            android:textSize="14sp"
+            android:textColor="#292929"
+            android:lineSpacingExtra="4sp"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_goods_delivery_cart_minus"
+            android:text="@string/lbl_plus"
+            android:textAllCaps="false"
+            android:layout_weight="0.25"
+            android:fontFamily="@font/markformc"
+            android:textStyle="normal"
+            android:textSize="21sp"
+            android:textColor="#292929"
+            android:lineSpacingExtra="-3sp"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

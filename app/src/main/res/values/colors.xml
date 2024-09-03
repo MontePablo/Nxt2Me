@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="text_color">#0b0b0b</color>
+    <color name="accent_blue">#00adee</color>
+    <color name="bg_color">#f1f1f1</color>
+    <color name="pink">#eb008b</color>
+    <color name="text_raise_complaint">#ec1d24</color>
+    <color name="text_tab">#ffffff</color>
+    <color name="text_tab_hf">#404042</color>
+    <color name="tab_indicator_color">#00adee</color>
+    <color name="secondary_text_color">#404042</color>
+    <color name="primary_text_color">#151515</color>
+    <color name="hint_color">#7c7c7c</color>
+    <color name="divider_color">#d5d5d5</color>
+    <color name="tnc_text_color">#231f20</color>
+    <color name="tnc_red_text_color">#ec1d24</color>
+    <color name="menu_card_text">#292929</color>
+    <color name="menu_card_offer">#f05a28</color>
+    <color name="bank_details_blue">#2e3092</color>
+    <color name="hamburger_background">#bc313131</color>
+    <color name="transparent">#00000000</color>
+    <color name="accepted_earnings_color">#00a550</color>
+    <color name="rejected_earnings_color">#ec1d24</color>
+    <color name="unselected_dot_color">#959191</color>
+    <color name="slots_pink">#eb008b</color>
+    <color name="header_text_color">#4e4e4e</color>
+    <color name="blank_item_backround">#D7D7D7</color>
+
+    <color name="red">#F05A28</color>
+    <color name="green">#00A550</color>
+    <color name="blue">#00ADEE</color>
+
+</resources>

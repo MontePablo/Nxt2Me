@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_delivery_boy_row"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOrderAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_delivery_address"
+            android:fontFamily="@font/markformc"
+            android:textStyle="normal"
+            android:textSize="12sp"
+            android:textColor="#292929"
+            android:lineSpacingExtra="6sp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="19dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="12dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOrderType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_delivery_type"
+            android:fontFamily="@font/markformc"
+            android:textStyle="normal"
+            android:textSize="12sp"
+            android:textColor="#292929"
+            android:lineSpacingExtra="6sp"
+            app:layout_constraintTop_toBottomOf="@id/tvOrderAddress"
+            android:layout_marginTop="6dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="12dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOrderDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_date"
+            android:fontFamily="@font/markformc"
+            android:textStyle="normal"
+            android:textSize="12sp"
+            android:textColor="#292929"
+            android:lineSpacingExtra="6sp"
+            app:layout_constraintTop_toBottomOf="@id/tvOrderAddress"
+            android:layout_marginTop="6dp"
+            app:layout_constraintStart_toEndOf="@id/tvOrderType"
+            android:layout_marginStart="30dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOrderTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_time"
+            android:fontFamily="@font/markformc"
+            android:textStyle="normal"
+            android:textSize="12sp"
+            android:textColor="#292929"
+            android:lineSpacingExtra="6sp"
+            app:layout_constraintTop_toBottomOf="@id/tvOrderAddress"
+            android:layout_marginTop="6dp"
+            app:layout_constraintStart_toEndOf="@id/tvOrderDate"
+            android:layout_marginStart="25dp"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOrderStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_order_status"
+            android:fontFamily="@font/markformc"
+            android:textStyle="normal"
+            android:textSize="12sp"
+            android:textColor="#f05a28"
+            android:lineSpacingExtra="6sp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="19dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="20dp"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clHiredDeliveryBoy"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/tvOrderType"
+            android:layout_marginTop="15dp"
+            android:visibility="visible">
+
+            <View
+                android:id="@+id/vLine"
+                android:layout_width="match_parent"
+                android:background="@color/divider_color"
+                android:layout_height="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="7dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="5dp"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDeliveryBoyName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_hired_delivery_boy_name"
+                android:fontFamily="@font/markformc_medium"
+                android:textStyle="normal"
+                android:textSize="12sp"
+                android:textColor="#000000"
+                android:lineSpacingExtra="6sp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="12dp"
+                app:layout_constraintTop_toBottomOf="@id/vLine"
+                android:layout_marginTop="10dp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonPayDeliveryBoy"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/lbl_pay_view_delivery_boy"
+                android:fontFamily="@font/markformc_medium"
+                android:textStyle="normal"
+                android:textSize="12sp"
+                android:textColor="#00adee"
+                app:cornerRadius="8dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/accent_blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintTop_toBottomOf="@id/vLine"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/vLine1"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/tvOrderType"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

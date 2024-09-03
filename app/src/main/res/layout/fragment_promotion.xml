@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPromotionDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_promotion_desc"
+            android:fontFamily="@font/markformc"
+            android:textStyle="normal"
+            android:textSize="12sp"
+            android:textColor="#121212"
+            android:lineSpacingExtra="6sp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="21dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="19dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="19dp"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clBigBannerAdvertisement"
+            android:layout_width="0dp"
+            android:layout_height="76dp"
+            android:background="@drawable/bg_delivery_boy_row"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="4dp"
+            app:layout_constraintTop_toBottomOf="@id/tvPromotionDesc"
+            android:layout_marginTop="40dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivBigBannerAdvertisement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_promotion_ad"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="21dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="18dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBigBannerAdvertisement"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_create_big_banner"
+                android:fontFamily="@font/markformc"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:textColor="#292929"
+                android:lineSpacingExtra="4sp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toEndOf="@id/ivBigBannerAdvertisement"
+                android:layout_marginStart="28dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="20dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clSmallBannerAdvertisement"
+            android:layout_width="0dp"
+            android:layout_height="76dp"
+            android:background="@drawable/bg_delivery_boy_row"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="4dp"
+            app:layout_constraintTop_toBottomOf="@id/clBigBannerAdvertisement"
+            android:layout_marginTop="6dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivSmallBannerAdvertisement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_promotion_ad"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="21dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="18dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSmallBannerAdvertisement"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_create_small_banner"
+                android:fontFamily="@font/markformc"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:textColor="#292929"
+                android:lineSpacingExtra="4sp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toEndOf="@id/ivSmallBannerAdvertisement"
+                android:layout_marginStart="28dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="20dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clLaunchNewProduct"
+            android:layout_width="0dp"
+            android:layout_height="76dp"
+            android:background="@drawable/bg_delivery_boy_row"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="4dp"
+            app:layout_constraintTop_toBottomOf="@id/clSmallBannerAdvertisement"
+            android:layout_marginTop="6dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivLaunchNewProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_promotion_new_product"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="21dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="18dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLaunchNewProduct"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_launch_new_product"
+                android:fontFamily="@font/markformc"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:textColor="#292929"
+                android:lineSpacingExtra="4sp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toEndOf="@id/ivLaunchNewProduct"
+                android:layout_marginStart="28dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="20dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clOwnPromotion"
+            android:layout_width="0dp"
+            android:layout_height="76dp"
+            android:background="@drawable/bg_delivery_boy_row"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="4dp"
+            app:layout_constraintTop_toBottomOf="@id/clLaunchNewProduct"
+            android:layout_marginTop="6dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivOwnPromotion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_own_promotion"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="21dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="18dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOwnPromotion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_create_own_promotion"
+                android:fontFamily="@font/markformc"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:textColor="#292929"
+                android:lineSpacingExtra="4sp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toEndOf="@id/ivOwnPromotion"
+                android:layout_marginStart="28dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="20dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_gradient">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".9"
+        android:background="@drawable/bg_rounded_borders"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="17dp"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="17dp"
+        android:elevation="4dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_logo_nxt_2_me_small"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="27dp"
+            />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vpContent"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            app:layout_constraintTop_toBottomOf="@id/ivLogo"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gldots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".29"
+            />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tlDots"
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            app:tabBackground="@drawable/tab_selector"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="0dp"
+            app:layout_constraintTop_toBottomOf="@id/gldots"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".33"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tlName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:fontFamily="@font/markformc"
+            android:hint="@string/user_name"
+            android:textColorHint="@color/hint_color"
+            style="@style/Widget.Design.TextInputLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            app:layout_constraintTop_toBottomOf="@id/glName"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/markformc"
+                android:textColorHint="@color/secondary_text_color"
+                android:textColor="@color/primary_text_color"
+                android:textSize="13sp"
+                android:inputType="text"
+                android:paddingBottom="10dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".39"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tlEmail"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:fontFamily="@font/markformc"
+            android:hint="Email Address"
+            android:textColorHint="@color/hint_color"
+            style="@style/Widget.Design.TextInputLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            app:layout_constraintTop_toBottomOf="@id/glEmail"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etMail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/markformc"
+                android:textColorHint="@color/secondary_text_color"
+                android:textColor="@color/primary_text_color"
+                android:textSize="13sp"
+                android:inputType="text"
+                android:paddingBottom="10dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glMobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".46"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tlMobileNumber"
+            style="@style/Widget.Design.TextInputLayout"
+            android:layout_width="280dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="18dp"
+            android:fontFamily="@font/markformc"
+            android:hint="@string/lbl_mobile_number"
+            android:textColorHint="@color/hint_color"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/spinnerCountryCode"
+            app:layout_constraintTop_toBottomOf="@id/glMobile">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etMobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/markformc"
+                android:inputType="phone"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/primary_text_color"
+                android:textColorHint="@color/secondary_text_color"
+                android:textSize="13sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/spinnerCountryCode"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/glMobile"
+            app:layout_constraintBottom_toTopOf="@id/glSociety"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glSociety"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".53"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tlSocietyName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:fontFamily="@font/markformc"
+            android:hint="@string/lbl_society_name"
+            android:textColorHint="@color/hint_color"
+            style="@style/Widget.Design.TextInputLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            app:layout_constraintTop_toBottomOf="@id/glSociety"
+            android:layout_marginTop="5dp"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSocietyName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/markformc"
+                android:textColorHint="@color/secondary_text_color"
+                android:textColor="@color/primary_text_color"
+                android:textSize="13sp"
+                android:inputType="text"
+                android:paddingBottom="10dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glWing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".60"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tlWing"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:fontFamily="@font/markformc"
+            android:hint="@string/lbl_wing_flat_no"
+            android:textColorHint="@color/hint_color"
+            style="@style/Widget.Design.TextInputLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            app:layout_constraintTop_toBottomOf="@id/glWing"
+            android:layout_marginTop="5dp"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etWing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/markformc"
+                android:textColorHint="@color/secondary_text_color"
+                android:textColor="@color/primary_text_color"
+                android:textSize="13sp"
+                android:inputType="text"
+                android:paddingBottom="10dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".68"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tlPassword"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:fontFamily="@font/markformc"
+            android:hint="@string/lbl_password"
+            android:textColorHint="@color/hint_color"
+            style="@style/Widget.Design.TextInputLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            app:layout_constraintTop_toBottomOf="@id/glPassword"
+            android:layout_marginTop="5dp"
+            app:endIconMode="password_toggle"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/markformc"
+                android:textColorHint="@color/secondary_text_color"
+                android:textColor="@color/primary_text_color"
+                android:textSize="13sp"
+                android:inputType="textPassword"
+                android:paddingBottom="10dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glConfirmPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".75"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tlConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:fontFamily="@font/markformc"
+            android:hint="@string/lbl_confirm_password"
+            android:textColorHint="@color/hint_color"
+            style="@style/Widget.Design.TextInputLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            app:layout_constraintTop_toBottomOf="@id/glConfirmPassword"
+            android:layout_marginTop="5dp"
+            app:endIconMode="password_toggle"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/markformc"
+                android:textColorHint="@color/secondary_text_color"
+                android:textColor="@color/primary_text_color"
+                android:textSize="13sp"
+                android:inputType="textPassword"
+                android:paddingBottom="10dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glReferral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".83"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tlReferralCode"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:fontFamily="@font/markformc"
+            android:hint="@string/lbl_referral_code_optional"
+            android:textColorHint="@color/hint_color"
+            style="@style/Widget.Design.TextInputLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            app:layout_constraintTop_toBottomOf="@id/glReferral"
+            android:layout_marginTop="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etReferralCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/markformc"
+                android:textColorHint="@color/secondary_text_color"
+                android:textColor="@color/primary_text_color"
+                android:textSize="13sp"
+                android:inputType="text"
+                android:paddingBottom="10dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glBtnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="643dp" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_next"
+            android:textAllCaps="false"
+            android:fontFamily="@font/markformc_medium"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"
+            app:cornerRadius="8dp"
+            android:backgroundTint="@color/accent_blue"
+            android:layout_marginEnd="68dp"
+            android:layout_marginStart="68dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
