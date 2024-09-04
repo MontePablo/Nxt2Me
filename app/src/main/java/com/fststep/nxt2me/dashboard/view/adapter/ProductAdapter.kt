@@ -58,7 +58,7 @@ class ProductAdapter(
             data[position].apply {
                 binding.run {
                     tvMerchantItemName.text =productName
-                    tvMerchantItemAmount.text=productDetails?.price
+                    tvMerchantItemAmount.text=productDetails?.totalCost
                     Glide.with(this.ivMerchantItemImage.context).load(getImageDownloadUrl(productImageUrl?:"")).into(this.ivMerchantItemImage)
                     ivCall.setOnClickListener { Toast.makeText(context,"Not yet implemented",Toast.LENGTH_SHORT).show() }
                     ivChat.setOnClickListener { Toast.makeText(context,"Not yet implemented",Toast.LENGTH_SHORT).show() }

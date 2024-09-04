@@ -156,21 +156,21 @@ class MenuFragment : Fragment(),ProductButtonListener {
         mBinding.progressBar.visibility=View.VISIBLE
     }
     private fun refreshProductList() {
-//        val searchReq= ProductSearchRequest().apply {
-//            size = 1000
-//            Preferences.fetchUser().apply {
-//                userId=this?.highFlyerDto?.id!!
-//            }
-//            categoryId= Preferences.fetchMyCat()?.id?.toInt()
-//            subCategoryId= Preferences.fetchMySubCat()?.id?.toInt()
-//            limitedDistance=10000
-//            Preferences.fetchLocation().apply {
-//                longitude=this?.lng;latitude=this?.lat
-//            }
-//            page=0
-//
-//        }
-//        productViewModel.searchProduct(searchReq)
+        val searchReq= ProductSearchRequest().apply {
+            size = 1000
+            Preferences.fetchUser().apply {
+                userId=this?.highFlyerDto?.id!!
+            }
+            categoryId= Preferences.fetchMyCat()?.id?.toInt()
+            subCategoryId= Preferences.fetchMySubCat()?.id?.toInt()
+            limitedDistance=10000
+            Preferences.fetchLocation().apply {
+                longitude=this?.lng;latitude=this?.lat
+            }
+            page=0
+
+        }
+        productViewModel.searchProduct(searchReq)
     }
     private fun onProductListDownload(state: State<ProductListResponse>?) {
         when (state) {

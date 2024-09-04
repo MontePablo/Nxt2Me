@@ -212,7 +212,7 @@ class AddPhoneItem : AppCompatActivity(),ProductButtonListener {
             mBinding.apply {
                 name=etProductName.text.toString()
                 productDetails= ProductDetail().apply {
-                    price=etMarketPrice.text.toString()
+                    totalCost=etMarketPrice.text.toString()
                     discount=etDiscount.text.toString()
                     desc=etProductDescription.text.toString()
                 }
