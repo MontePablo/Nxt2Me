@@ -54,7 +54,6 @@
                 app:layout_constraintTop_toBottomOf="@id/ivLogo"
                 android:layout_marginTop="24dp"
                 />
-
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ivSearch"
                 android:layout_width="wrap_content"
@@ -102,7 +101,25 @@
                     />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
-
+            <LinearLayout
+                android:id="@+id/cartCountLayout"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/ll1"
+                app:layout_constraintRight_toRightOf="@id/ll1"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="17dp"
+                android:background="@drawable/cart_count_backround"
+                android:layout_width="wrap_content"
+                android:padding="3dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/cartCount"
+                    android:textSize="8sp"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15"/>
+            </LinearLayout>
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvItemCount"
                 android:layout_width="25dp"

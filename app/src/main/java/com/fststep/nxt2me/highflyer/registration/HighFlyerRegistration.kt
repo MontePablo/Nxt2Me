@@ -59,7 +59,7 @@ class HighFlyerRegistration: AppCompatActivity() {
      var selectedSubCategoryId=0L
      lateinit var selectedSubCategory:SubCategory
      var isIdUploaded=false
-    lateinit var contract:ActivityResultLauncher<String?>
+    lateinit var contract:ActivityResultLauncher<String>
     val aadharFile=PickedFileData()
     val licenceFile=PickedFileData()
     val photoFile=PickedFileData()

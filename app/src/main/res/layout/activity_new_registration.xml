@@ -153,7 +153,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tlMobileNumber"
             style="@style/Widget.Design.TextInputLayout"
-            android:layout_width="280dp"
+            android:layout_width="200dp"
             android:layout_height="48dp"
             android:layout_marginStart="18dp"
             android:layout_marginTop="5dp"
@@ -184,8 +184,8 @@
 
         <Spinner
             android:id="@+id/spinnerCountryCode"
-            style="@style/Widget.AppCompat.Spinner.Underlined"
-            android:layout_width="150dp"
+            style="@style/Widget.AppCompat.Spinner"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             app:layout_constraintLeft_toLeftOf="parent"

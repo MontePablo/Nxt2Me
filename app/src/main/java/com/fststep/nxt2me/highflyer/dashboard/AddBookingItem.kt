@@ -38,7 +38,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class AddBookingItem : AppCompatActivity(),ProductButtonListener {
     private val productViewModel: ProductViewModel by viewModels()
     lateinit var mBinding:ActivityAddBookingItemBinding
-    lateinit var contract: ActivityResultLauncher<String?>
+    lateinit var contract: ActivityResultLauncher<String>
     lateinit var mAdapter: ProductAdapter
     var oldProduct:Product?=null
     var image: Uri?=null

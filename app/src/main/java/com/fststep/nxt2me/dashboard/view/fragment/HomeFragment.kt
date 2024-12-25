@@ -195,7 +195,7 @@ class HomeFragment : Fragment(), SubcategoryListener {
                     Log.d("TAG", "requestLocation is null")
                 } else {
                     Log.d("TAG", "location not null")
-                    saveLocation(p0.lastLocation)
+                    saveLocation(p0.lastLocation!!)
                 }
             }
         }

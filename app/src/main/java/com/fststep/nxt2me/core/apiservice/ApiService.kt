@@ -8,6 +8,7 @@ import com.fststep.nxt2me.core.data.models.CategoryResponse
 import com.fststep.nxt2me.core.data.models.ChangePasswordRequest
 import com.fststep.nxt2me.core.data.models.CommonResponse
 import com.fststep.nxt2me.core.data.models.CountryCodeResponse
+import com.fststep.nxt2me.core.data.models.CreateOrderRequest
 import com.fststep.nxt2me.core.data.models.ForgotPasswordRequest
 import com.fststep.nxt2me.core.data.models.HighFlyerRegistrationRequest
 import com.fststep.nxt2me.core.data.models.IdsUploadResponse
@@ -86,4 +87,7 @@ interface ApiService {
 
     @POST("fst-search/api/searchMerchantByLocation")
     suspend fun sellerSearch(@Header("Authorization") token:String,@Body data:SellerSearchRequest):SellerListResponse
+
+    @POST("fst-order/api/createOrder")
+    suspend fun createOrder(@Header("Authorization") token:String,@Body data:CreateOrderRequest):CommonResponse
 }

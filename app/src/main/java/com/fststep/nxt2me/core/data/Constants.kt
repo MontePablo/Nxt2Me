@@ -44,4 +44,6 @@ object Constants {
     const val KEY_PRODUCT="product"
 
     const val KEY_DASHBOARD_JUMP="dashboard_jump"
+
+    const val ORDER_REQUEST="ORDER_REQUEST"
 }

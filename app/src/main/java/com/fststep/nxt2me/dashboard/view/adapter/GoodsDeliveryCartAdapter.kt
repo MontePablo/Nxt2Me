@@ -31,7 +31,7 @@ class GoodsDeliveryCartAdapter(var context: Context, private val dataSet: ArrayL
     // Create new views (invoked by the layout manager)
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
         // Create a new view, which defines the UI of the list item
-        val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.customview_goods_card_item, viewGroup, false)
+        val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.customview_goods_cart_item, viewGroup, false)
         return ViewHolder(view)
     }
 

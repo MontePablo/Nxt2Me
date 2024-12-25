@@ -36,7 +36,11 @@ data class Product (
     val highFlyer: Boolean? = null,
     val enableDistanceMsg: Boolean? = null,
     val categoryId: Long? = null,
-    val subCategoryId: Long? = null
+    val subCategoryId: Long? = null,
+
+    var isInCart: Boolean =false, //offline
+    var quantity: Int =1 // offline
+
 )
 data class Pageable (
     val sort: Sort? = null,

@@ -36,7 +36,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class AddPhoneItem : AppCompatActivity(),ProductButtonListener {
     private val productViewModel: ProductViewModel by viewModels()
     lateinit var mBinding: ActivityAddPhoneItemBinding
-    lateinit var contract: ActivityResultLauncher<String?>
+    lateinit var contract: ActivityResultLauncher<String>
     var oldProduct: Product?=null
     var image: Uri?=null
 

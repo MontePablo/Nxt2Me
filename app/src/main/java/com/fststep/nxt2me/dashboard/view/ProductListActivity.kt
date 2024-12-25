@@ -1,6 +1,8 @@
 package com.fststep.nxt2me.dashboard.view
 
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -11,6 +13,7 @@ import com.fststep.nxt2me.R
 import com.fststep.nxt2me.core.data.Constants
 import com.fststep.nxt2me.core.data.Preferences
 import com.fststep.nxt2me.core.data.models.CategoryTypeEnum
+import com.fststep.nxt2me.core.data.models.CreateOrderRequest
 import com.fststep.nxt2me.core.data.models.Product
 import com.fststep.nxt2me.core.data.models.ProductListResponse
 import com.fststep.nxt2me.core.data.models.ProductSearchRequest
@@ -30,16 +33,32 @@ class ProductListActivity : AppCompatActivity(), ProductListener {
     lateinit var mAdapter: ProductAdapter
     lateinit var mBinding: ActivityProductListBinding
     lateinit var type:CategoryTypeEnum
+    lateinit var seller:Seller
+    val orderRequest=CreateOrderRequest().apply { products= mutableListOf() }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mBinding=ActivityProductListBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
-        val seller= Gson().fromJson(intent.getStringExtra(Constants.SELLER),Seller::class.java)
+        seller= Gson().fromJson(intent.getStringExtra(Constants.SELLER),Seller::class.java)
         type=getType(seller)!!
         initRecyclerView()
         refreshProductList(seller)
         productViewModel.apply {
             observe(productListResponse,::onProductListDownload)
+        }
+        mBinding.apply {
+            ivCart.setOnClickListener {
+                if (type==CategoryTypeEnum.Good){
+                    startActivity(Intent(this@ProductListActivity,Product_goods_cart_activity::class.java).apply {
+                        putExtra(Constants.ORDER_REQUEST,Gson().toJson(orderRequest))
+                    })
+                }else if (type==CategoryTypeEnum.Booking){
+                    startActivity(Intent(this@ProductListActivity,Product_booking_cart_activity::class.java).apply {
+                        putExtra(Constants.ORDER_REQUEST,Gson().toJson(orderRequest))
+                    })
+                }else{
+                }
+            }
         }
     }
     private fun onProductListDownload(state: State<ProductListResponse>?) {
@@ -88,9 +107,53 @@ class ProductListActivity : AppCompatActivity(), ProductListener {
         mAdapter.updateData(data)
     }
 
-    override fun onClickProduct(product: Product) {
-        TODO("Not yet implemented")
+    override fun addToCart(product: Product) {
+        orderRequest.apply {
+            products?.add(product)
+        }
+        updateCartCountImage()
     }
+
+    override fun removeFromCart(product: Product) {
+        orderRequest.apply {
+            products?.remove(product)
+        }
+        updateCartCountImage()
+    }
+
+    override fun increaseQuantity(product: Product) {
+        product.quantity++
+        updateCartCountImage()
+
+    }
+
+    override fun decreaseQuantity(product: Product) {
+        product.quantity--
+        updateCartCountImage()
+
+    }
+
+    override fun performCall(product: Product) {
+        val dialIntent = Intent(Intent.ACTION_DIAL)  //Action_call willbe used to directly call and CALL_PHONE permission also required in that case
+
+        // Set the phone number in the I ntent data
+        dialIntent.data = Uri.parse("tel:${product.mobileNo}")
+
+        // Start the dialer app
+        startActivity(dialIntent)
+    }
+
+    override fun performText(product: Product) {
+        val smsUri = Uri.parse("smsto:${product.mobileNo}")
+        val intent = Intent(Intent.ACTION_SENDTO, smsUri)
+        intent.putExtra("sms_body", "Hello, I would like to go for a consultation") // Optional pre-filled message
+
+        // Check if an app exists to handle this intent
+        if (intent.resolveActivity(packageManager) != null) {
+            startActivity(intent)
+        }
+    }
+
     fun getType(seller:Seller):CategoryTypeEnum?{
         for(cat in Preferences.fetchCategories()?.data?.categoryList!!){
             if(seller.categoryId==cat.id){
@@ -106,9 +169,22 @@ class ProductListActivity : AppCompatActivity(), ProductListener {
         }
         return null
     }
+   fun updateCartCountImage(){
+       if(orderRequest.products?.size!! >0){
+           mBinding.cartCountLayout.visibility=View.VISIBLE
+           mBinding.cartCount.text=orderRequest.products?.size.toString()
+       }else{
+           mBinding.cartCountLayout.visibility=View.GONE
+       }
+   }
 
 
 }
 interface ProductListener{
-    fun onClickProduct(product:Product)
+    fun addToCart(product:Product)
+    fun removeFromCart(product:Product)
+    fun increaseQuantity(product: Product)
+    fun decreaseQuantity(product: Product)
+    fun performCall(product: Product)
+    fun performText(product: Product)
 }
